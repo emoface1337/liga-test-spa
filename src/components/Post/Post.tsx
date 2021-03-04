@@ -1,6 +1,6 @@
 import React, { FC, ReactElement } from 'react'
 import styled from 'styled-components'
-import { PostWithUserInfoType } from '../../api'
+import { PostWithUserInfoType } from '../../api/api'
 
 // import { PostType, PostWithUserInfoType, UserType } from '../../api'
 
@@ -11,7 +11,7 @@ const ArticleWrapper = styled.div`
 
 const Header = styled.div`
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
 `
@@ -33,6 +33,7 @@ const UsernameLink = styled.a`
 
 const Title = styled.h3`
   margin: 0;
+  text-transform: capitalize;
   display: inline-block;
 `
 

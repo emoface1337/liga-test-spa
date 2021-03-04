@@ -1,9 +1,9 @@
 import React, { FC, ReactElement } from 'react'
 import styled from 'styled-components'
 
-import Post from '../Article/Post'
+import Post from '../Post/Post'
 
-import { PostWithUserInfoType } from '../../api'
+import { PostWithUserInfoType } from '../../api/api'
 // import { PostWithUserInfoType, UserWithPostsType } from '../../api'
 
 const PostsWrapper = styled.div`

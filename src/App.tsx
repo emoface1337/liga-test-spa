@@ -1,8 +1,8 @@
 import React, { FC, ReactElement, useEffect, useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 import Header from './components/Header/Header'
-import PostsContainer from './components/ArticleContainer/PostsContainer'
-import { fetchData, PostWithUserInfoType } from './api'
+import PostsContainer from './components/PostsContainer/PostsContainer'
+import { fetchData, PostWithUserInfoType } from './api/api'
 // import { fetchData, PostType, PostWithUserInfoType, UserType, UserWithPostsType } from './api'
 
 const AppWrapper = styled.div`
@@ -41,13 +41,16 @@ const Loader = styled.div`
     height: 64px;
     margin: 8px;
     border-radius: 50%;
-    border: 6px solid #fff;
+    border-width: 6px;
+    border-style: solid;
     border-color: #3DBDF6 transparent #3DBDF6 transparent;
     animation: ${rotateAnimation} 1.2s linear infinite
   }
 `
 
 const App: FC = (): ReactElement => {
+
+    // список не стал виртуализировать, всё-таки не 1000+ статей
 
     const [data, setData] = useState<PostWithUserInfoType[] | undefined | []>(undefined)
     // const [data, setData] = useState<UserWithPostsType[] | undefined | []>(undefined)
